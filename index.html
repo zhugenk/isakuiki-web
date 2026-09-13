@@ -10,6 +10,9 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://isakuikiinterior.com" />
 
+  <!-- ✅ DIPERBAIKI: Favicon pakai logo.jpg -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+
   <!-- Font & Icon -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,13 +35,16 @@
     nav {
       background: #ffffff;
       box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-      padding: 16px 0;
+      padding: 12px 0;
       position: sticky; top: 0; z-index: 100;
     }
     nav .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.4rem; letter-spacing: -0.5px; color: #1e1e1e; }
-    .logo img { height: 42px; width: auto; display: block; background: #d4c5b2; border-radius: 6px; padding: 4px 8px; font-size: 0.8rem; color: #3d2e22; font-weight: 600; }
-    .logo span { color: #a67c5b; }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; letter-spacing: -0.5px; color: #1e1e1e; }
+    /* ✅ DIPERBAIKI: styling logo img bersih, tanpa background abu-abu */
+    .logo img { height: 48px; width: auto; display: block; object-fit: contain; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-text strong { font-size: 1.15rem; font-weight: 700; letter-spacing: 1px; color: #1e1e1e; }
+    .logo-text small { font-size: 0.65rem; letter-spacing: 3px; color: #a67c5b; font-weight: 500; }
     .nav-links { display: flex; gap: 28px; font-weight: 500; font-size: 0.95rem; }
     .nav-links a { padding: 6px 0; border-bottom: 2px solid transparent; transition: 0.2s; }
     .nav-links a:hover { border-bottom-color: #a67c5b; color: #a67c5b; }
@@ -88,11 +94,18 @@
     /* ===== TENTANG ===== */
     #tentang { padding: 70px 0 80px; background: #f5efe9; }
     .tentang-wrapper { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+    /* ✅ DIPERBAIKI: foto tentang pakai logo.jpg */
     .tentang-foto {
-      flex: 1 1 35%; min-height: 240px; background: #cbb9a8; border-radius: 20px;
-      display: flex; align-items: center; justify-content: center; color: #3d2e22; font-weight: 500;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23cbb9a8"/><text x="50" y="55" font-family="Inter" font-size="12" fill="%235a4537" text-anchor="middle">Foto profil</text></svg>');
-      background-size: cover; background-position: center;
+      flex: 1 1 35%;
+      min-height: 320px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      background-image: url('images/logo.jpg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 30px;
     }
     .tentang-teks { flex: 1 1 55%; }
     .tentang-teks h2 { font-size: 2.2rem; font-weight: 600; margin-bottom: 16px; color: #1e1e1e; }
@@ -210,12 +223,15 @@
       .kontak-grid { flex-direction: column; }
       .section-title h2 { font-size: 2rem; }
       .maps-wrapper iframe { height: 220px; }
+      .logo img { height: 42px; }
+      .logo-text strong { font-size: 1rem; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
       .hero-text h1 { font-size: 1.8rem; }
-      .logo { font-size: 1.2rem; }
-      .logo img { height: 34px; }
+      .logo img { height: 36px; }
+      .logo-text strong { font-size: 0.95rem; }
+      .logo-text small { font-size: 0.6rem; letter-spacing: 2px; }
       .grid-proyek { grid-template-columns: 1fr; }
       .wa-float { width: 54px; height: 54px; font-size: 1.6rem; bottom: 18px; right: 18px; }
     }
@@ -227,8 +243,12 @@
   <nav>
     <div class="container">
       <div class="logo">
-        <img src="" alt="Logo Isakuiki Interior" style="background:#d4c5b2; padding:4px 10px; border-radius:6px; font-size:0.9rem; color:#3d2e22; height:42px; width:auto;" />
-        Isakuiki <span>Interior</span>
+        <!-- ✅ DIPERBAIKI: src diisi dengan logo.jpg -->
+        <img src="images/logo.jpg" alt="Logo Isakuiki Interior" />
+        <div class="logo-text">
+          <strong>ISAKUIKI</strong>
+          <small>INTERIOR</small>
+        </div>
       </div>
       <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
       <div class="nav-links" id="navLinks">
