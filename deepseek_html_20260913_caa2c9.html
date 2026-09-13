@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isakuiki Interior | Desain & Konsultasi Interior di Tenggarong</title>
+  <meta name="description" content="Isakuiki Interior – jasa desain interior modern, fungsional, dan estetis di Tenggarong, Kutai Kartanegara. Lihat portofolio proyek dan hubungi kami untuk konsultasi." />
+  <meta name="keywords" content="interior, desain interior, Tenggarong, Kutai Kartanegara, Isakuiki Interior, jasa interior" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://isakuikiinterior.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f6;
+      color: #2e2e2e;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAVBAR */
+    nav {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      padding: 16px 0;
+      position: sticky; top: 0; z-index: 100;
+    }
+    nav .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.4rem; letter-spacing: -0.5px; color: #1e1e1e; }
+    .logo img { height: 42px; width: auto; display: block; background: #d4c5b2; border-radius: 6px; padding: 4px 8px; font-size: 0.8rem; color: #3d2e22; font-weight: 600; }
+    .logo span { color: #a67c5b; }
+    .nav-links { display: flex; gap: 28px; font-weight: 500; font-size: 0.95rem; }
+    .nav-links a { padding: 6px 0; border-bottom: 2px solid transparent; transition: 0.2s; }
+    .nav-links a:hover { border-bottom-color: #a67c5b; color: #a67c5b; }
+    .hamburger { display: none; font-size: 1.6rem; cursor: pointer; color: #2e2e2e; }
+
+    /* HERO */
+    #beranda { padding: 60px 0 70px; background: linear-gradient(135deg, #f5efe9 0%, #faf8f6 100%); }
+    #beranda .container { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+    .hero-text { flex: 1 1 45%; }
+    .hero-text .badge {
+      display: inline-block; background: #e6dace; color: #4d3a2b;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 1px;
+      padding: 6px 16px; border-radius: 30px; margin-bottom: 18px; text-transform: uppercase;
+    }
+    .hero-text h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; color: #1e1e1e; }
+    .hero-text h1 span { color: #a67c5b; }
+    .hero-text p { font-size: 1.1rem; color: #4f4a45; max-width: 500px; margin-bottom: 30px; }
+    .btn-primary {
+      display: inline-block; background: #a67c5b; color: #fff;
+      padding: 12px 34px; border-radius: 40px; font-weight: 600;
+      transition: 0.25s; border: none; cursor: pointer; font-size: 1rem;
+    }
+    .btn-primary:hover { background: #8b6a4e; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(166,124,91,0.25); }
+    .hero-image {
+      flex: 1 1 45%; background: #d9cec2; border-radius: 20px; min-height: 260px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: #4d3a2b; font-weight: 500;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23d9cec2"/><text x="50" y="55" font-family="Inter" font-size="12" fill="%236b5848" text-anchor="middle">Foto interior</text></svg>');
+      background-size: cover; background-position: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    /* PROYEK */
+    #proyek { padding: 70px 0 80px; background: #ffffff; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 { font-size: 2.4rem; font-weight: 600; color: #1e1e1e; }
+    .section-title p { color: #6b5f55; max-width: 500px; margin: 8px auto 0; }
+    .grid-proyek { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .card-proyek { background: #f8f5f2; border-radius: 16px; overflow: hidden; transition: 0.25s; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .card-proyek:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(0,0,0,0.06); }
+    .card-proyek .thumbnail { height: 200px; background: #d4c5b2; display: flex; align-items: center; justify-content: center; color: #4d3a2b; font-weight: 500; background-size: cover; background-position: center; }
+    .card-proyek .info { padding: 20px 22px 24px; }
+    .card-proyek .info h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 4px; }
+    .card-proyek .info .kategori { font-size: 0.8rem; color: #a67c5b; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+    .card-proyek .info p { color: #5c534b; margin-top: 8px; font-size: 0.95rem; }
+
+    /* TENTANG */
+    #tentang { padding: 70px 0 80px; background: #f5efe9; }
+    .tentang-wrapper { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+    .tentang-foto {
+      flex: 1 1 35%; min-height: 240px; background: #cbb9a8; border-radius: 20px;
+      display: flex; align-items: center; justify-content: center; color: #3d2e22; font-weight: 500;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23cbb9a8"/><text x="50" y="55" font-family="Inter" font-size="12" fill="%235a4537" text-anchor="middle">Foto profil</text></svg>');
+      background-size: cover; background-position: center;
+    }
+    .tentang-teks { flex: 1 1 55%; }
+    .tentang-teks h2 { font-size: 2.2rem; font-weight: 600; margin-bottom: 16px; color: #1e1e1e; }
+    .tentang-teks h2 span { color: #a67c5b; }
+    .tentang-teks p { color: #4f453d; margin-bottom: 16px; font-size: 1rem; }
+    .keahlian-list { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 16px; }
+    .keahlian-list span { background: #e6dace; padding: 6px 18px; border-radius: 30px; font-size: 0.85rem; font-weight: 500; color: #3d2e22; }
+
+    /* KONTAK */
+    #kontak { padding: 70px 0 80px; background: #ffffff; }
+    .kontak-grid { display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; }
+    .kontak-info { flex: 1 1 40%; }
+    .kontak-info h2 { font-size: 2.2rem; font-weight: 600; margin-bottom: 12px; }
+    .kontak-info h2 span { color: #a67c5b; }
+    .kontak-info > p { color: #5c534b; margin-bottom: 28px; }
+    .kontak-item { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; font-size: 1rem; }
+    .kontak-item i { width: 28px; font-size: 1.4rem; color: #a67c5b; }
+    .kontak-item a { transition: 0.2s; word-break: break-all; }
+    .kontak-item a:hover { color: #a67c5b; text-decoration: underline; }
+    .sosial-icons { display: flex; gap: 18px; margin-top: 24px; }
+    .sosial-icons a {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 48px; height: 48px; background: #f0ebe6; border-radius: 50%;
+      font-size: 1.3rem; color: #3d2e22; transition: 0.2s;
+    }
+    .sosial-icons a:hover { background: #a67c5b; color: #fff; transform: translateY(-3px); }
+    .kontak-form { flex: 1 1 45%; background: #f8f5f2; padding: 30px 32px; border-radius: 20px; }
+    .kontak-form label { font-weight: 500; display: block; margin-bottom: 4px; font-size: 0.9rem; }
+    .kontak-form input,
+    .kontak-form textarea {
+      width: 100%; padding: 12px 16px; border: 1px solid #e0d6cc;
+      border-radius: 12px; margin-bottom: 18px; font-family: inherit;
+      background: #fff; transition: 0.2s; font-size: 0.95rem;
+    }
+    .kontak-form input:focus,
+    .kontak-form textarea:focus {
+      outline: none; border-color: #a67c5b;
+      box-shadow: 0 0 0 3px rgba(166,124,91,0.1);
+    }
+    .kontak-form textarea { min-height: 120px; resize: vertical; }
+    .kontak-form .btn-primary { width: 100%; text-align: center; }
+
+    /* GOOGLE MAPS */
+    .maps-wrapper {
+      margin-top: 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    .maps-wrapper iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      display: block;
+    }
+
+    /* FOOTER */
+    footer { background: #1e1e1e; color: #cbc3bb; padding: 28px 0; text-align: center; font-size: 0.9rem; }
+    footer span { color: #a67c5b; }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) { .hero-text h1 { font-size: 2.4rem; } }
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+      .nav-links { display: none; flex-direction: column; width: 100%; padding: 18px 0 8px; gap: 14px; border-top: 1px solid #eee; margin-top: 14px; }
+      .nav-links.active { display: flex; }
+      .nav-links a { border-bottom: none; padding: 6px 0; }
+      .hero-text h1 { font-size: 2rem; }
+      #beranda .container { flex-direction: column; text-align: center; }
+      .hero-text p { margin-left: auto; margin-right: auto; }
+      .hero-image { width: 100%; min-height: 200px; }
+      .tentang-wrapper { flex-direction: column; text-align: center; }
+      .keahlian-list { justify-content: center; }
+      .kontak-grid { flex-direction: column; }
+      .section-title h2 { font-size: 2rem; }
+      .maps-wrapper iframe { height: 220px; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero-text h1 { font-size: 1.8rem; }
+      .logo { font-size: 1.2rem; }
+      .logo img { height: 34px; }
+      .grid-proyek { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <img src="" alt="Logo Isakuiki Interior" style="background:#d4c5b2; padding:4px 10px; border-radius:6px; font-size:0.9rem; color:#3d2e22; height:42px; width:auto;" />
+        Isakuiki <span>Interior</span>
+      </div>
+      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+      <div class="nav-links" id="navLinks">
+        <a href="#beranda">Beranda</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BERANDA -->
+  <section id="beranda">
+    <div class="container">
+      <div class="hero-text">
+        <div class="badge">✨ Desain & Konsultasi</div>
+        <h1>Ruang <span>Fungsional</span><br />dengan Estetika <span>Abadi</span></h1>
+        <p>Isakuiki Interior menghadirkan solusi desain yang memadukan keindahan, kenyamanan, dan kepribadian Anda. Temukan inspirasi untuk setiap sudut ruangan.</p>
+        <a href="#proyek" class="btn-primary">Lihat Karya Kami</a>
+      </div>
+      <div class="hero-image"><span style="display:none;">Foto ruang tamu</span></div>
+    </div>
+  </section>
+
+  <!-- PROYEK -->
+  <section id="proyek">
+    <div class="container">
+      <div class="section-title">
+        <h2>Proyek <span style="color:#a67c5b;">Terkini</span></h2>
+        <p>Beberapa hasil karya yang telah kami wujudkan untuk klien kami.</p>
+      </div>
+      <div class="grid-proyek">
+        <div class="card-proyek">
+          <div class="thumbnail" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect width=%22100%22 height=%22100%22 fill=%22%23d4c5b2%22/><text x=%2250%22 y=%2255%22 font-family=%22Inter%22 font-size=%2211%22 fill=%22%234d3a2b%22 text-anchor=%22middle%22>Ruang tamu</text></svg>');"></div>
+          <div class="info">
+            <span class="kategori">Ruang Tamu</span>
+            <h3>Minimalis Elegan</h3>
+            <p>Kombinasi warna netral dan kayu alami menciptakan suasana hangat dan modern.</p>
+          </div>
+        </div>
+        <div class="card-proyek">
+          <div class="thumbnail" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect width=%22100%22 height=%22100%22 fill=%22%23cbb9a8%22/><text x=%2250%22 y=%2255%22 font-family=%22Inter%22 font-size=%2211%22 fill=%22%234d3a2b%22 text-anchor=%22middle%22>Dapur</text></svg>');"></div>
+          <div class="info">
+            <span class="kategori">Dapur</span>
+            <h3>Dapur Terbuka</h3>
+            <p>Desain fungsional dengan pulau dapur sebagai pusat aktivitas keluarga.</p>
+          </div>
+        </div>
+        <div class="card-proyek">
+          <div class="thumbnail" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect width=%22100%22 height=%22100%22 fill=%22%23d9cec2%22/><text x=%2250%22 y=%2255%22 font-family=%22Inter%22 font-size=%2211%22 fill=%22%234d3a2b%22 text-anchor=%22middle%22>Kamar tidur</text></svg>');"></div>
+          <div class="info">
+            <span class="kategori">Kamar Tidur</span>
+            <h3>Serenity Room</h3>
+            <p>Palet warna lembut dan pencahayaan yang menenangkan untuk istirahat maksimal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section id="tentang">
+    <div class="container">
+      <div class="tentang-wrapper">
+        <div class="tentang-foto"></div>
+        <div class="tentang-teks">
+          <h2>Tentang <span>Isakuiki</span></h2>
+          <p><strong>Isakuiki Interior</strong> lahir dari kecintaan terhadap ruang yang bermakna. Kami adalah tim desainer interior yang berpengalaman, berdedikasi menciptakan lingkungan yang tidak hanya indah dipandang, tetapi juga nyaman dan mencerminkan karakter penghuninya.</p>
+          <p>Berbasis di Tenggarong, Kutai Kartanegara, kami melayani kebutuhan desain interior untuk rumah, kantor, kafe, dan berbagai ruang komersial. Dengan pendekatan personal, kami mendampingi Anda dari konsep hingga eksekusi, memastikan setiap detail sesuai dengan impian Anda.</p>
+          <div class="keahlian-list">
+            <span>Desain Ruang</span><span>Konsultasi Gaya</span><span>Rendering 3D</span><span>Renovasi</span><span>Penataan Furnitur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak">
+    <div class="container">
+      <div class="kontak-grid">
+        <div class="kontak-info">
+          <h2>Hubungi <span>Kami</span></h2>
+          <p>Ada pertanyaan atau ingin konsultasi? Jangan ragu untuk menghubungi kami melalui email, telepon, atau media sosial.</p>
+          <div class="kontak-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:interiorisakuiki@gmail.com">interiorisakuiki@gmail.com</a>
+          </div>
+          <div class="kontak-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+6285247043255">+62 852 4704 3255</a>
+          </div>
+          <div class="kontak-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Tenggarong, Kutai Kartanegara</span>
+          </div>
+          <div class="sosial-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="kontak-form">
+          <!-- ===== FORMSPREE FORM – SUDAH TERHUBUNG ===== -->
+          <form id="contactForm" action="https://formspree.io/f/xdeorowg" method="POST">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama Anda" required />
+
+            <label for="emailKontak">Email</label>
+            <input type="email" id="emailKontak" name="email" placeholder="email@anda.com" required />
+
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" placeholder="Ceritakan kebutuhan interior Anda..." required></textarea>
+
+            <!-- Honeypot anti-spam (disembunyikan) -->
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <button type="submit" class="btn-primary">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ===== GOOGLE MAPS ===== -->
+      <div class="maps-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5!2d116.9566779167361!3d-0.4026437604948408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zLTAuNDAyNjQzNzYwNDk0ODQwOCwgMTE2Ljk1NjY3NzkxNjczNjE!5e0!3m2!1sid!2sid!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Lokasi Isakuiki Interior, Tenggarong">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      &copy; 2026 <span>Isakuiki Interior</span> — Desain & Konsultasi Interior, Tenggarong, Kutai Kartanegara. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- HAMBURGER TOGGLE -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+  </script>
+</body>
+</html>
