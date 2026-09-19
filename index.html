@@ -79,13 +79,18 @@
       transition: 0.25s; border: 2px solid #a67c5b; cursor: pointer; font-size: 1rem;
     }
     .btn-outline:hover { background: #a67c5b; color: #fff; transform: translateY(-2px); }
+
+    /* ===== HERO IMAGE (FOTO UTAMA) ===== */
     .hero-image {
-      flex: 1 1 45%; background: #d9cec2; border-radius: 20px; min-height: 260px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem; color: #4d3a2b; font-weight: 500;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23d9cec2"/><text x="50" y="55" font-family="Inter" font-size="12" fill="%236b5848" text-anchor="middle">Foto interior</text></svg>');
-      background-size: cover; background-position: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      flex: 1 1 45%;
+      min-height: 400px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      background-image: url('images/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-color: #e6dace;
     }
 
     /* ===== SECTION TITLE ===== */
@@ -382,7 +387,7 @@
       #beranda .container { flex-direction: column; text-align: center; }
       .hero-text p { margin-left: auto; margin-right: auto; }
       .hero-buttons { justify-content: center; }
-      .hero-image { width: 100%; min-height: 200px; }
+      .hero-image { width: 100%; min-height: 260px; }
       .tentang-wrapper { flex-direction: column; text-align: center; }
       .keahlian-list { justify-content: center; }
       .kontak-grid { flex-direction: column; }
@@ -451,7 +456,7 @@
           <a href="#proyek" class="btn-outline">Lihat Karya</a>
         </div>
       </div>
-      <div class="hero-image"><span style="display:none;">Foto ruang tamu</span></div>
+      <div class="hero-image"></div>
     </div>
   </section>
 
@@ -1193,7 +1198,6 @@
 
     // ===== EVENT LISTENER GLOBAL =====
     document.addEventListener('DOMContentLoaded', () => {
-      // Filter buku
       document.querySelectorAll('#filterBuku .filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           document.querySelectorAll('#filterBuku .filter-btn').forEach(b => b.classList.remove('active'));
@@ -1203,13 +1207,9 @@
         });
       });
 
-      // Render awal buku
       renderBuku();
-
-      // Inisialisasi kalkulator meubeler
       ubahSatuan();
 
-      // Modal buku events
       const modal = document.getElementById('modalBuku');
       const btnTutup = document.getElementById('tutupModal');
       if (btnTutup) btnTutup.addEventListener('click', tutupBuku);
