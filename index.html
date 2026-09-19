@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- SEO Dasar -->
   <title>Isakuiki Interior | Desain & Konsultasi Interior di Tenggarong</title>
-  <meta name="description" content="Isakuiki Interior – jasa desain interior modern, fungsional, dan estetis di Tenggarong, Kutai Kartanegara. Lihat portofolio proyek dan hubungi kami untuk konsultasi." />
-  <meta name="keywords" content="interior, desain interior, Tenggarong, Kutai Kartanegara, Isakuiki Interior, jasa interior" />
+  <meta name="description" content="Isakuiki Interior – jasa desain interior modern, fungsional, dan estetis di Tenggarong, Kutai Kartanegara. Hitung kebutuhan wallpaper gratis + konsultasi." />
+  <meta name="keywords" content="interior, desain interior, Tenggarong, Kutai Kartanegara, Isakuiki Interior, jasa interior, wallpaper, kalkulator wallpaper" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://isakuikiinterior.com" />
 
-  <!-- ✅ DIPERBAIKI: Favicon pakai logo.jpg -->
+  <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
 
   <!-- Font & Icon -->
@@ -40,14 +40,18 @@
     }
     nav .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
     .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; letter-spacing: -0.5px; color: #1e1e1e; }
-    /* ✅ DIPERBAIKI: styling logo img bersih, tanpa background abu-abu */
     .logo img { height: 48px; width: auto; display: block; object-fit: contain; }
     .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
     .logo-text strong { font-size: 1.15rem; font-weight: 700; letter-spacing: 1px; color: #1e1e1e; }
     .logo-text small { font-size: 0.65rem; letter-spacing: 3px; color: #a67c5b; font-weight: 500; }
-    .nav-links { display: flex; gap: 28px; font-weight: 500; font-size: 0.95rem; }
-    .nav-links a { padding: 6px 0; border-bottom: 2px solid transparent; transition: 0.2s; }
+    .nav-links { display: flex; gap: 24px; font-weight: 500; font-size: 0.95rem; align-items: center; }
+    .nav-links a { padding: 6px 0; border-bottom: 2px solid transparent; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; }
     .nav-links a:hover { border-bottom-color: #a67c5b; color: #a67c5b; }
+    .nav-links .badge-new {
+      background: #a67c5b; color: #fff; font-size: 0.6rem;
+      padding: 2px 7px; border-radius: 10px; font-weight: 700;
+      letter-spacing: 0.5px;
+    }
     .hamburger { display: none; font-size: 1.6rem; cursor: pointer; color: #2e2e2e; }
 
     /* ===== HERO / BERANDA ===== */
@@ -62,12 +66,19 @@
     .hero-text h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; color: #1e1e1e; }
     .hero-text h1 span { color: #a67c5b; }
     .hero-text p { font-size: 1.1rem; color: #4f4a45; max-width: 500px; margin-bottom: 30px; }
+    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn-primary {
       display: inline-block; background: #a67c5b; color: #fff;
       padding: 12px 34px; border-radius: 40px; font-weight: 600;
       transition: 0.25s; border: none; cursor: pointer; font-size: 1rem;
     }
     .btn-primary:hover { background: #8b6a4e; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(166,124,91,0.25); }
+    .btn-outline {
+      display: inline-block; background: transparent; color: #a67c5b;
+      padding: 12px 34px; border-radius: 40px; font-weight: 600;
+      transition: 0.25s; border: 2px solid #a67c5b; cursor: pointer; font-size: 1rem;
+    }
+    .btn-outline:hover { background: #a67c5b; color: #fff; transform: translateY(-2px); }
     .hero-image {
       flex: 1 1 45%; background: #d9cec2; border-radius: 20px; min-height: 260px;
       display: flex; align-items: center; justify-content: center;
@@ -77,11 +88,182 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.04);
     }
 
-    /* ===== PROYEK ===== */
-    #proyek { padding: 70px 0 80px; background: #ffffff; }
+    /* ===== SECTION TITLE ===== */
     .section-title { text-align: center; margin-bottom: 50px; }
     .section-title h2 { font-size: 2.4rem; font-weight: 600; color: #1e1e1e; }
     .section-title p { color: #6b5f55; max-width: 500px; margin: 8px auto 0; }
+    .badge-gratis {
+      display: inline-block; background: #25D366; color: #fff;
+      padding: 4px 14px; border-radius: 30px; font-size: 0.7rem;
+      font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px;
+    }
+
+    /* ===== KALKULATOR WALLPAPER ===== */
+    #kalkulator { padding: 70px 0 80px; background: #ffffff; }
+
+    .kalkulator-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background: #f8f5f2;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .kalkulator-input h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #3d2e22;
+      margin-bottom: 14px;
+      margin-top: 8px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e6dace;
+    }
+    .kalkulator-input h3:first-child { margin-top: 0; }
+
+    .input-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      flex: 1 1 140px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #4f453d;
+      margin-bottom: 6px;
+    }
+
+    .input-group input,
+    .input-group select {
+      padding: 10px 14px;
+      border: 1px solid #e0d6cc;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: #fff;
+      transition: 0.2s;
+      width: 100%;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus {
+      outline: none;
+      border-color: #a67c5b;
+      box-shadow: 0 0 0 3px rgba(166,124,91,0.1);
+    }
+
+    .input-group small {
+      font-size: 0.72rem;
+      color: #8b7d70;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn-reset {
+      padding: 12px 24px;
+      background: #e6dace;
+      color: #3d2e22;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+      font-family: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+    .btn-reset:hover { background: #d4c5b2; }
+
+    /* Kolom Hasil */
+    .kalkulator-hasil {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .kalkulator-hasil h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #3d2e22;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e6dace;
+    }
+
+    .hasil-placeholder {
+      text-align: center;
+      padding: 40px 20px;
+      color: #8b7d70;
+    }
+    .hasil-placeholder p { margin-top: 12px; font-size: 0.9rem; }
+
+    .hasil-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px dashed #ece5dc;
+      font-size: 0.92rem;
+    }
+    .hasil-label { color: #5c534b; }
+    .hasil-value { font-weight: 600; color: #2e2e2e; }
+
+    .hasil-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #a67c5b 0%, #8b6a4e 100%);
+      border-radius: 12px;
+      color: #fff;
+    }
+    .hasil-total span { font-size: 0.8rem; letter-spacing: 1px; font-weight: 500; }
+    .hasil-total strong { font-size: 1.8rem; font-weight: 700; }
+
+    .hasil-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: #fdf6ee;
+      border-left: 4px solid #a67c5b;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #6b5f55;
+    }
+    .hasil-note i { color: #a67c5b; margin-top: 2px; }
+
+    .btn-wa-hasil {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; background: #25D366; color: #fff;
+      padding: 12px 24px; border-radius: 40px; font-weight: 600;
+      font-size: 0.95rem; transition: 0.25s; width: 100%;
+      margin-top: 16px;
+    }
+    .btn-wa-hasil:hover {
+      background: #1ebe5b; transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37,211,102,0.3); color: #fff;
+    }
+
+    /* ===== PROYEK ===== */
+    #proyek { padding: 70px 0 80px; background: #ffffff; }
     .grid-proyek { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
     .card-proyek { background: #f8f5f2; border-radius: 16px; overflow: hidden; transition: 0.25s; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
     .card-proyek:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(0,0,0,0.06); }
@@ -94,7 +276,6 @@
     /* ===== TENTANG ===== */
     #tentang { padding: 70px 0 80px; background: #f5efe9; }
     .tentang-wrapper { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
-    /* ✅ DIPERBAIKI: foto tentang pakai logo.jpg */
     .tentang-foto {
       flex: 1 1 35%;
       min-height: 320px;
@@ -148,7 +329,6 @@
     .kontak-form textarea { min-height: 120px; resize: vertical; }
     .kontak-form .btn-primary { width: 100%; text-align: center; }
 
-    /* Tombol WhatsApp di kontak */
     .btn-whatsapp {
       display: inline-flex; align-items: center; justify-content: center;
       gap: 8px; background: #25D366; color: #fff;
@@ -217,6 +397,7 @@
       .hero-text h1 { font-size: 2rem; }
       #beranda .container { flex-direction: column; text-align: center; }
       .hero-text p { margin-left: auto; margin-right: auto; }
+      .hero-buttons { justify-content: center; }
       .hero-image { width: 100%; min-height: 200px; }
       .tentang-wrapper { flex-direction: column; text-align: center; }
       .keahlian-list { justify-content: center; }
@@ -225,6 +406,10 @@
       .maps-wrapper iframe { height: 220px; }
       .logo img { height: 42px; }
       .logo-text strong { font-size: 1rem; }
+      .kalkulator-wrapper { grid-template-columns: 1fr; padding: 24px; gap: 24px; }
+      .button-row { flex-direction: column; }
+      .button-row .btn-primary,
+      .button-row .btn-reset { width: 100%; text-align: center; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
@@ -243,7 +428,6 @@
   <nav>
     <div class="container">
       <div class="logo">
-        <!-- ✅ DIPERBAIKI: src diisi dengan logo.jpg -->
         <img src="images/logo.jpg" alt="Logo Isakuiki Interior" />
         <div class="logo-text">
           <strong>ISAKUIKI</strong>
@@ -253,6 +437,7 @@
       <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
       <div class="nav-links" id="navLinks">
         <a href="#beranda">Beranda</a>
+        <a href="#kalkulator">Kalkulator <span class="badge-new">NEW</span></a>
         <a href="#proyek">Proyek</a>
         <a href="#tentang">Tentang</a>
         <a href="#kontak">Kontak</a>
@@ -267,9 +452,152 @@
         <div class="badge">✨ Desain & Konsultasi</div>
         <h1>Ruang <span>Fungsional</span><br />dengan Estetika <span>Abadi</span></h1>
         <p>Isakuiki Interior menghadirkan solusi desain yang memadukan keindahan, kenyamanan, dan kepribadian Anda. Temukan inspirasi untuk setiap sudut ruangan.</p>
-        <a href="#proyek" class="btn-primary">Lihat Karya Kami</a>
+        <div class="hero-buttons">
+          <a href="#kalkulator" class="btn-primary"><i class="fas fa-calculator"></i> Hitung Wallpaper</a>
+          <a href="#proyek" class="btn-outline">Lihat Karya</a>
+        </div>
       </div>
       <div class="hero-image"><span style="display:none;">Foto ruang tamu</span></div>
+    </div>
+  </section>
+
+  <!-- ===== KALKULATOR WALLPAPER ===== -->
+  <section id="kalkulator">
+    <div class="container">
+      <div class="section-title">
+        <span class="badge-gratis">GRATIS</span>
+        <h2>Kalkulator <span style="color:#a67c5b;">Wallpaper</span></h2>
+        <p>Hitung kebutuhan wallpaper ruangan Anda — sudah otomatis dikurangi luas pintu & jendela.</p>
+      </div>
+
+      <div class="kalkulator-wrapper">
+        <!-- KOLOM INPUT -->
+        <div class="kalkulator-input">
+          <h3>📏 Dimensi Ruangan</h3>
+
+          <div class="input-row">
+            <div class="input-group">
+              <label for="panjang">Panjang (m)</label>
+              <input type="number" id="panjang" placeholder="4" min="0" step="0.01" />
+            </div>
+            <div class="input-group">
+              <label for="lebar">Lebar (m)</label>
+              <input type="number" id="lebar" placeholder="3" min="0" step="0.01" />
+            </div>
+            <div class="input-group">
+              <label for="tinggi">Tinggi Dinding (m)</label>
+              <input type="number" id="tinggi" placeholder="3" min="0" step="0.01" />
+            </div>
+          </div>
+
+          <h3>🚪 Pintu & Jendela (yang tidak dipasang wallpaper)</h3>
+
+          <div class="input-row">
+            <div class="input-group">
+              <label for="pintu">Luas Total Pintu (m²)</label>
+              <input type="number" id="pintu" placeholder="2.1" min="0" step="0.01" />
+              <small>Pintu standar: 0.8 × 2.1 = ±1.68 m²</small>
+            </div>
+            <div class="input-group">
+              <label for="jendela">Luas Total Jendela (m²)</label>
+              <input type="number" id="jendela" placeholder="1.5" min="0" step="0.01" />
+              <small>Jendela standar: 1 × 1.5 = ±1.5 m²</small>
+            </div>
+          </div>
+
+          <h3>🎨 Spesifikasi Wallpaper</h3>
+
+          <div class="input-row">
+            <div class="input-group">
+              <label for="lebarRoll">Lebar Roll (m)</label>
+              <select id="lebarRoll">
+                <option value="0.53" selected>0.53 m (standar Indonesia)</option>
+                <option value="0.70">0.70 m</option>
+                <option value="1.06">1.06 m (import)</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="panjangRoll">Panjang Roll (m)</label>
+              <select id="panjangRoll">
+                <option value="10" selected>10 m</option>
+                <option value="15">15 m</option>
+                <option value="16.5">16.5 m</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="wastage">Cadangan Pola (%)</label>
+              <select id="wastage">
+                <option value="0">0% (polos tanpa pola)</option>
+                <option value="10" selected>10% (pola kecil)</option>
+                <option value="15">15% (pola sedang)</option>
+                <option value="20">20% (pola besar)</option>
+                <option value="25">25% (pola besar + motif rumit)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="button" class="btn-primary" onclick="hitungWallpaper()">
+              <i class="fas fa-calculator"></i> Hitung Kebutuhan
+            </button>
+            <button type="button" class="btn-reset" onclick="resetKalkulator()">
+              <i class="fas fa-undo"></i> Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- KOLOM HASIL -->
+        <div class="kalkulator-hasil">
+          <h3>📊 Hasil Perhitungan</h3>
+
+          <div id="hasilKosong" class="hasil-placeholder">
+            <i class="fas fa-calculator" style="font-size:3rem; color:#d4c5b2;"></i>
+            <p>Isi data di sebelah kiri, lalu klik <strong>Hitung Kebutuhan</strong>.</p>
+          </div>
+
+          <div id="hasilIsi" style="display:none;">
+            <div class="hasil-item">
+              <span class="hasil-label">Keliling Ruangan</span>
+              <span class="hasil-value" id="hasilKeliling">-</span>
+            </div>
+            <div class="hasil-item">
+              <span class="hasil-label">Luas Dinding</span>
+              <span class="hasil-value" id="hasilLuasDinding">-</span>
+            </div>
+            <div class="hasil-item">
+              <span class="hasil-label">Luas Pintu & Jendela</span>
+              <span class="hasil-value" id="hasilLuasBukaan">-</span>
+            </div>
+            <div class="hasil-item">
+              <span class="hasil-label">Luas Bersih Dinding</span>
+              <span class="hasil-value" id="hasilLuasBersih">-</span>
+            </div>
+            <div class="hasil-item">
+              <span class="hasil-label">Luas 1 Roll</span>
+              <span class="hasil-value" id="hasilLuasRoll">-</span>
+            </div>
+            <div class="hasil-item">
+              <span class="hasil-label">Cadangan Pola</span>
+              <span class="hasil-value" id="hasilWastage">-</span>
+            </div>
+
+            <div class="hasil-total">
+              <span>ROLL YANG DIBUTUHKAN</span>
+              <strong id="hasilRoll">-</strong>
+            </div>
+
+            <div class="hasil-note">
+              <i class="fas fa-info-circle"></i>
+              <span>Disarankan beli <strong>1 roll ekstra</strong> untuk cadangan perbaikan di masa depan.</span>
+            </div>
+
+            <!-- CTA WhatsApp dengan hasil otomatis -->
+            <a href="#" id="waHasil" target="_blank" rel="noopener" class="btn-wa-hasil">
+              <i class="fab fa-whatsapp"></i> Konsultasi Hasil Ini
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -365,7 +693,6 @@
         </div>
 
         <div class="kontak-form">
-          <!-- ===== FORMSPREE FORM ===== -->
           <form id="contactForm" action="https://formspree.io/f/xdeorowg" method="POST">
             <label for="nama">Nama</label>
             <input type="text" id="nama" name="nama" placeholder="Nama Anda" required />
@@ -376,13 +703,11 @@
             <label for="pesan">Pesan</label>
             <textarea id="pesan" name="pesan" placeholder="Ceritakan kebutuhan interior Anda..." required></textarea>
 
-            <!-- Honeypot anti-spam -->
             <input type="text" name="_gotcha" style="display:none" />
 
             <button type="submit" class="btn-primary">Kirim Pesan</button>
           </form>
 
-          <!-- Tombol WhatsApp di bawah form -->
           <div style="text-align:center; margin-top:20px;">
             <p style="color:#6b5f55; font-size:0.9rem; margin-bottom:10px;">atau konsultasi langsung via</p>
             <a href="https://wa.me/6285247043255?text=Halo%20Isakuiki%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20desain%20interior." 
@@ -395,7 +720,6 @@
         </div>
       </div>
 
-      <!-- ===== GOOGLE MAPS ===== -->
       <div class="maps-wrapper">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5!2d116.9566779167361!3d-0.4026437604948408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zLTAuNDAyNjQzNzYwNDk0ODQwOCwgMTE2Ljk1NjY3NzkxNjczNjE!5e0!3m2!1sid!2sid!4v1700000000000"
@@ -415,7 +739,7 @@
     </div>
   </footer>
 
-  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <!-- ===== FLOATING WHATSAPP ===== -->
   <a href="https://wa.me/6285247043255?text=Halo%20Isakuiki%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20desain%20interior." 
      target="_blank" 
      rel="noopener"
@@ -424,14 +748,75 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ===== HAMBURGER TOGGLE ===== -->
+  <!-- ===== SCRIPTS ===== -->
   <script>
+    // Hamburger toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => navLinks.classList.remove('active'));
     });
+
+    // ===== KALKULATOR WALLPAPER =====
+    function hitungWallpaper() {
+      const panjang  = parseFloat(document.getElementById('panjang').value) || 0;
+      const lebar    = parseFloat(document.getElementById('lebar').value) || 0;
+      const tinggi   = parseFloat(document.getElementById('tinggi').value) || 0;
+      const pintu    = parseFloat(document.getElementById('pintu').value) || 0;
+      const jendela  = parseFloat(document.getElementById('jendela').value) || 0;
+      const lebarRoll = parseFloat(document.getElementById('lebarRoll').value);
+      const panjangRoll = parseFloat(document.getElementById('panjangRoll').value);
+      const wastagePct = parseFloat(document.getElementById('wastage').value);
+
+      if (panjang <= 0 || lebar <= 0 || tinggi <= 0) {
+        alert('Mohon isi panjang, lebar, dan tinggi ruangan dengan benar.');
+        return;
+      }
+
+      const keliling     = 2 * (panjang + lebar);
+      const luasDinding  = keliling * tinggi;
+      const luasBukaan   = pintu + jendela;
+      const luasBersih   = Math.max(0, luasDinding - luasBukaan);
+      const luasRoll     = lebarRoll * panjangRoll;
+      const luasDenganCadangan = luasBersih * (1 + wastagePct / 100);
+      const rollDibutuhkan = Math.ceil(luasDenganCadangan / luasRoll);
+
+      document.getElementById('hasilKeliling').textContent    = keliling.toFixed(2) + ' m';
+      document.getElementById('hasilLuasDinding').textContent = luasDinding.toFixed(2) + ' m²';
+      document.getElementById('hasilLuasBukaan').textContent  = luasBukaan.toFixed(2) + ' m²';
+      document.getElementById('hasilLuasBersih').textContent  = luasBersih.toFixed(2) + ' m²';
+      document.getElementById('hasilLuasRoll').textContent    = luasRoll.toFixed(2) + ' m²';
+      document.getElementById('hasilWastage').textContent     = wastagePct + '%';
+      document.getElementById('hasilRoll').textContent        = rollDibutuhkan + ' roll';
+
+      document.getElementById('hasilKosong').style.display = 'none';
+      document.getElementById('hasilIsi').style.display = 'block';
+
+      // Update link WhatsApp dengan hasil perhitungan
+      const pesanWA = `Halo Isakuiki Interior, saya sudah hitung kebutuhan wallpaper ruangan saya:%0A%0A` +
+        `📏 Ruangan: ${panjang}m × ${lebar}m × ${tinggi}m%0A` +
+        `🚪 Pintu: ${pintu} m², Jendela: ${jendela} m²%0A` +
+        `🧻 Wallpaper: ${lebarRoll}m × ${panjangRoll}m%0A` +
+        `🎨 Cadangan pola: ${wastagePct}%%0A%0A` +
+        `📊 Hasil: *${rollDibutuhkan} roll* dibutuhkan.%0A%0A` +
+        `Bisa minta rekomendasi & estimasi harga?`;
+      
+      document.getElementById('waHasil').href = 
+        `https://wa.me/6285247043255?text=${pesanWA}`;
+    }
+
+    function resetKalkulator() {
+      ['panjang','lebar','tinggi','pintu','jendela'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('lebarRoll').value = '0.53';
+      document.getElementById('panjangRoll').value = '10';
+      document.getElementById('wastage').value = '10';
+
+      document.getElementById('hasilKosong').style.display = 'block';
+      document.getElementById('hasilIsi').style.display = 'none';
+    }
   </script>
 </body>
 </html>
