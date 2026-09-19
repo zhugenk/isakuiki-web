@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- SEO Dasar -->
   <title>Isakuiki Interior | Desain & Konsultasi Interior di Tenggarong</title>
-  <meta name="description" content="Isakuiki Interior – jasa desain interior modern, fungsional, dan estetis di Tenggarong, Kutai Kartanegara. Hitung kebutuhan wallpaper gratis + konsultasi." />
-  <meta name="keywords" content="interior, desain interior, Tenggarong, Kutai Kartanegara, Isakuiki Interior, jasa interior, wallpaper, kalkulator wallpaper" />
+  <meta name="description" content="Isakuiki Interior – jasa desain interior modern, fungsional, dan estetis di Tenggarong, Kutai Kartanegara. Kalkulator wallpaper & meubeler gratis + portofolio digital." />
+  <meta name="keywords" content="interior, desain interior, Tenggarong, Kutai Kartanegara, Isakuiki Interior, jasa interior, wallpaper, kalkulator wallpaper, kalkulator meubeler, kitchen set" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://isakuikiinterior.com" />
 
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
   <style>
-    /* Reset & dasar */
+    /* ===== RESET & DASAR ===== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
@@ -44,17 +44,17 @@
     .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
     .logo-text strong { font-size: 1.15rem; font-weight: 700; letter-spacing: 1px; color: #1e1e1e; }
     .logo-text small { font-size: 0.65rem; letter-spacing: 3px; color: #a67c5b; font-weight: 500; }
-    .nav-links { display: flex; gap: 24px; font-weight: 500; font-size: 0.95rem; align-items: center; }
+    .nav-links { display: flex; gap: 22px; font-weight: 500; font-size: 0.9rem; align-items: center; }
     .nav-links a { padding: 6px 0; border-bottom: 2px solid transparent; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; }
     .nav-links a:hover { border-bottom-color: #a67c5b; color: #a67c5b; }
     .nav-links .badge-new {
-      background: #a67c5b; color: #fff; font-size: 0.6rem;
-      padding: 2px 7px; border-radius: 10px; font-weight: 700;
+      background: #a67c5b; color: #fff; font-size: 0.55rem;
+      padding: 2px 6px; border-radius: 10px; font-weight: 700;
       letter-spacing: 0.5px;
     }
     .hamburger { display: none; font-size: 1.6rem; cursor: pointer; color: #2e2e2e; }
 
-    /* ===== HERO / BERANDA ===== */
+    /* ===== HERO ===== */
     #beranda { padding: 60px 0 70px; background: linear-gradient(135deg, #f5efe9 0%, #faf8f6 100%); }
     #beranda .container { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
     .hero-text { flex: 1 1 45%; }
@@ -98,8 +98,9 @@
       font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px;
     }
 
-    /* ===== KALKULATOR WALLPAPER ===== */
+    /* ===== KALKULATOR (shared) ===== */
     #kalkulator { padding: 70px 0 80px; background: #ffffff; }
+    #meubeler { padding: 70px 0 80px; background: #f5efe9; }
 
     .kalkulator-wrapper {
       display: grid;
@@ -110,6 +111,7 @@
       padding: 40px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.04);
     }
+    .kalkulator-wrapper.alt { background: #ffffff; }
 
     .kalkulator-input h3 {
       font-size: 1.05rem;
@@ -122,131 +124,64 @@
     }
     .kalkulator-input h3:first-child { margin-top: 0; }
 
-    .input-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-
-    .input-group {
-      flex: 1 1 140px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .input-group label {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #4f453d;
-      margin-bottom: 6px;
-    }
-
+    .input-row { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; }
+    .input-group { flex: 1 1 140px; display: flex; flex-direction: column; }
+    .input-group label { font-size: 0.85rem; font-weight: 500; color: #4f453d; margin-bottom: 6px; }
     .input-group input,
     .input-group select {
-      padding: 10px 14px;
-      border: 1px solid #e0d6cc;
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      background: #fff;
-      transition: 0.2s;
-      width: 100%;
+      padding: 10px 14px; border: 1px solid #e0d6cc; border-radius: 10px;
+      font-family: inherit; font-size: 0.95rem; background: #fff;
+      transition: 0.2s; width: 100%;
     }
-
     .input-group input:focus,
     .input-group select:focus {
-      outline: none;
-      border-color: #a67c5b;
+      outline: none; border-color: #a67c5b;
       box-shadow: 0 0 0 3px rgba(166,124,91,0.1);
     }
+    .input-group small { font-size: 0.72rem; color: #8b7d70; margin-top: 4px; font-style: italic; }
 
-    .input-group small {
-      font-size: 0.72rem;
-      color: #8b7d70;
-      margin-top: 4px;
-      font-style: italic;
-    }
-
-    .button-row {
-      display: flex;
-      gap: 12px;
-      margin-top: 24px;
-      flex-wrap: wrap;
-    }
-
+    .button-row { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
     .btn-reset {
-      padding: 12px 24px;
-      background: #e6dace;
-      color: #3d2e22;
-      border: none;
-      border-radius: 40px;
-      font-weight: 600;
-      font-family: inherit;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.25s;
+      padding: 12px 24px; background: #e6dace; color: #3d2e22;
+      border: none; border-radius: 40px; font-weight: 600;
+      font-family: inherit; font-size: 1rem; cursor: pointer; transition: 0.25s;
     }
     .btn-reset:hover { background: #d4c5b2; }
 
-    /* Kolom Hasil */
     .kalkulator-hasil {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      background: #ffffff; border-radius: 16px;
+      padding: 28px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
+    .kalkulator-hasil.alt { background: #f8f5f2; }
 
     .kalkulator-hasil h3 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #3d2e22;
-      margin-bottom: 18px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #e6dace;
+      font-size: 1.05rem; font-weight: 600; color: #3d2e22;
+      margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e6dace;
     }
-
-    .hasil-placeholder {
-      text-align: center;
-      padding: 40px 20px;
-      color: #8b7d70;
-    }
+    .hasil-placeholder { text-align: center; padding: 40px 20px; color: #8b7d70; }
     .hasil-placeholder p { margin-top: 12px; font-size: 0.9rem; }
 
     .hasil-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 1px dashed #ece5dc;
-      font-size: 0.92rem;
+      display: flex; justify-content: space-between;
+      padding: 10px 0; border-bottom: 1px dashed #ece5dc; font-size: 0.92rem;
     }
     .hasil-label { color: #5c534b; }
     .hasil-value { font-weight: 600; color: #2e2e2e; }
 
     .hasil-total {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 20px;
-      padding: 16px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 20px; padding: 16px 20px;
       background: linear-gradient(135deg, #a67c5b 0%, #8b6a4e 100%);
-      border-radius: 12px;
-      color: #fff;
+      border-radius: 12px; color: #fff;
     }
     .hasil-total span { font-size: 0.8rem; letter-spacing: 1px; font-weight: 500; }
     .hasil-total strong { font-size: 1.8rem; font-weight: 700; }
 
     .hasil-note {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-top: 16px;
-      padding: 12px 16px;
-      background: #fdf6ee;
-      border-left: 4px solid #a67c5b;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      color: #6b5f55;
+      display: flex; align-items: flex-start; gap: 10px;
+      margin-top: 16px; padding: 12px 16px;
+      background: #fdf6ee; border-left: 4px solid #a67c5b;
+      border-radius: 8px; font-size: 0.85rem; color: #6b5f55;
     }
     .hasil-note i { color: #a67c5b; margin-top: 2px; }
 
@@ -254,8 +189,7 @@
       display: flex; align-items: center; justify-content: center;
       gap: 8px; background: #25D366; color: #fff;
       padding: 12px 24px; border-radius: 40px; font-weight: 600;
-      font-size: 0.95rem; transition: 0.25s; width: 100%;
-      margin-top: 16px;
+      font-size: 0.95rem; transition: 0.25s; width: 100%; margin-top: 16px;
     }
     .btn-wa-hasil:hover {
       background: #1ebe5b; transform: translateY(-2px);
@@ -273,19 +207,87 @@
     .card-proyek .info .kategori { font-size: 0.8rem; color: #a67c5b; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
     .card-proyek .info p { color: #5c534b; margin-top: 8px; font-size: 0.95rem; }
 
+    /* ===== BUKU DIGITAL ===== */
+    #buku { padding: 70px 0 80px; background: #f5efe9; }
+
+    .filter-buku {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 10px; margin-bottom: 40px;
+    }
+    .filter-btn {
+      background: #f0ebe6; color: #4f453d;
+      border: none; padding: 8px 20px; border-radius: 30px;
+      font-family: inherit; font-size: 0.85rem; font-weight: 500;
+      cursor: pointer; transition: 0.2s;
+    }
+    .filter-btn:hover { background: #e6dace; color: #a67c5b; }
+    .filter-btn.active { background: #a67c5b; color: #fff; }
+
+    .grid-buku {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 28px;
+    }
+
+    .card-buku {
+      background: #ffffff; border-radius: 16px; overflow: hidden;
+      cursor: pointer; transition: 0.25s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      border: 1px solid #f0ebe6;
+    }
+    .card-buku:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(166,124,91,0.15);
+      border-color: #a67c5b;
+    }
+    .card-buku .cover {
+      position: relative; height: 280px; background: #e6dace;
+      background-size: cover; background-position: center;
+      display: flex; align-items: center; justify-content: center;
+      color: #a67c5b; font-size: 3.5rem; overflow: hidden;
+    }
+    .card-buku .cover::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.5));
+    }
+    .card-buku .badge-buku {
+      position: absolute; top: 12px; left: 12px;
+      background: #a67c5b; color: #fff;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 1px;
+      padding: 4px 12px; border-radius: 20px; text-transform: uppercase; z-index: 2;
+    }
+    .card-buku .badge-tahun {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(255,255,255,0.95); color: #4f453d;
+      font-size: 0.7rem; font-weight: 700;
+      padding: 4px 10px; border-radius: 20px; z-index: 2;
+    }
+    .card-buku .info-buku {
+      padding: 18px 20px 22px; position: relative;
+    }
+    .card-buku .info-buku h3 {
+      font-size: 1.05rem; font-weight: 600;
+      color: #1e1e1e; margin-bottom: 6px; line-height: 1.3;
+    }
+    .card-buku .info-buku .lokasi {
+      font-size: 0.8rem; color: #8b7d70;
+      display: flex; align-items: center; gap: 6px; margin-bottom: 12px;
+    }
+    .card-buku .info-buku .lokasi i { color: #a67c5b; }
+    .card-buku .btn-baca {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: #a67c5b; transition: 0.2s;
+    }
+    .card-buku:hover .btn-baca { color: #8b6a4e; gap: 12px; }
+
     /* ===== TENTANG ===== */
-    #tentang { padding: 70px 0 80px; background: #f5efe9; }
+    #tentang { padding: 70px 0 80px; background: #ffffff; }
     .tentang-wrapper { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
     .tentang-foto {
-      flex: 1 1 35%;
-      min-height: 320px;
-      background: #ffffff;
-      border-radius: 20px;
+      flex: 1 1 35%; min-height: 320px; background: #ffffff; border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
       background-image: url('images/logo.jpg');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-size: contain; background-position: center; background-repeat: no-repeat;
       padding: 30px;
     }
     .tentang-teks { flex: 1 1 55%; }
@@ -296,7 +298,7 @@
     .keahlian-list span { background: #e6dace; padding: 6px 18px; border-radius: 30px; font-size: 0.85rem; font-weight: 500; color: #3d2e22; }
 
     /* ===== KONTAK ===== */
-    #kontak { padding: 70px 0 80px; background: #ffffff; }
+    #kontak { padding: 70px 0 80px; background: #f5efe9; }
     .kontak-grid { display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; }
     .kontak-info { flex: 1 1 40%; }
     .kontak-info h2 { font-size: 2.2rem; font-weight: 600; margin-bottom: 12px; }
@@ -309,11 +311,11 @@
     .sosial-icons { display: flex; gap: 18px; margin-top: 24px; }
     .sosial-icons a {
       display: inline-flex; align-items: center; justify-content: center;
-      width: 48px; height: 48px; background: #f0ebe6; border-radius: 50%;
+      width: 48px; height: 48px; background: #ffffff; border-radius: 50%;
       font-size: 1.3rem; color: #3d2e22; transition: 0.2s;
     }
     .sosial-icons a:hover { background: #a67c5b; color: #fff; transform: translateY(-3px); }
-    .kontak-form { flex: 1 1 45%; background: #f8f5f2; padding: 30px 32px; border-radius: 20px; }
+    .kontak-form { flex: 1 1 45%; background: #ffffff; padding: 30px 32px; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.03); }
     .kontak-form label { font-weight: 500; display: block; margin-bottom: 4px; font-size: 0.9rem; }
     .kontak-form input,
     .kontak-form textarea {
@@ -341,16 +343,11 @@
     }
     .btn-whatsapp i { font-size: 1.2rem; }
 
-    /* ===== GOOGLE MAPS ===== */
     .maps-wrapper {
-      margin-top: 40px;
-      border-radius: 20px;
-      overflow: hidden;
+      margin-top: 40px; border-radius: 20px; overflow: hidden;
       box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
-    .maps-wrapper iframe {
-      width: 100%; height: 300px; border: 0; display: block;
-    }
+    .maps-wrapper iframe { width: 100%; height: 300px; border: 0; display: block; }
 
     /* ===== FOOTER ===== */
     footer { background: #1e1e1e; color: #cbc3bb; padding: 28px 0; text-align: center; font-size: 0.9rem; }
@@ -358,28 +355,15 @@
 
     /* ===== FLOATING WHATSAPP ===== */
     .wa-float {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 60px;
-      height: 60px;
-      background: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
-      z-index: 999;
-      transition: 0.25s;
-      animation: wa-pulse 2s infinite;
+      position: fixed; bottom: 24px; right: 24px;
+      width: 60px; height: 60px; background: #25D366; color: #fff;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+      z-index: 999; transition: 0.25s; animation: wa-pulse 2s infinite;
     }
     .wa-float:hover {
-      background: #1ebe5b;
-      transform: scale(1.1);
-      box-shadow: 0 8px 24px rgba(37,211,102,0.6);
-      color: #fff;
+      background: #1ebe5b; transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(37,211,102,0.6); color: #fff;
     }
     @keyframes wa-pulse {
       0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
@@ -410,6 +394,12 @@
       .button-row { flex-direction: column; }
       .button-row .btn-primary,
       .button-row .btn-reset { width: 100%; text-align: center; }
+      .grid-buku { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+      .card-buku .cover { height: 220px; font-size: 2.5rem; }
+      .card-buku .info-buku { padding: 14px 14px 18px; }
+      .card-buku .info-buku h3 { font-size: 0.9rem; }
+      .card-buku .info-buku .lokasi { font-size: 0.75rem; }
+      .filter-btn { padding: 6px 14px; font-size: 0.78rem; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
@@ -418,6 +408,8 @@
       .logo-text strong { font-size: 0.95rem; }
       .logo-text small { font-size: 0.6rem; letter-spacing: 2px; }
       .grid-proyek { grid-template-columns: 1fr; }
+      .grid-buku { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .card-buku .cover { height: 180px; font-size: 2rem; }
       .wa-float { width: 54px; height: 54px; font-size: 1.6rem; bottom: 18px; right: 18px; }
     }
   </style>
@@ -437,8 +429,10 @@
       <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
       <div class="nav-links" id="navLinks">
         <a href="#beranda">Beranda</a>
-        <a href="#kalkulator">Kalkulator <span class="badge-new">NEW</span></a>
+        <a href="#kalkulator">Wallpaper</a>
+        <a href="#meubeler">Meubeler</a>
         <a href="#proyek">Proyek</a>
+        <a href="#buku">Buku <span class="badge-new">NEW</span></a>
         <a href="#tentang">Tentang</a>
         <a href="#kontak">Kontak</a>
       </div>
@@ -471,10 +465,8 @@
       </div>
 
       <div class="kalkulator-wrapper">
-        <!-- KOLOM INPUT -->
         <div class="kalkulator-input">
           <h3>📏 Dimensi Ruangan</h3>
-
           <div class="input-row">
             <div class="input-group">
               <label for="panjang">Panjang (m)</label>
@@ -490,8 +482,7 @@
             </div>
           </div>
 
-          <h3>🚪 Pintu & Jendela (yang tidak dipasang wallpaper)</h3>
-
+          <h3>🚪 Pintu & Jendela (tidak dipasang wallpaper)</h3>
           <div class="input-row">
             <div class="input-group">
               <label for="pintu">Luas Total Pintu (m²)</label>
@@ -506,7 +497,6 @@
           </div>
 
           <h3>🎨 Spesifikasi Wallpaper</h3>
-
           <div class="input-row">
             <div class="input-group">
               <label for="lebarRoll">Lebar Roll (m)</label>
@@ -546,54 +536,160 @@
           </div>
         </div>
 
-        <!-- KOLOM HASIL -->
         <div class="kalkulator-hasil">
           <h3>📊 Hasil Perhitungan</h3>
-
           <div id="hasilKosong" class="hasil-placeholder">
             <i class="fas fa-calculator" style="font-size:3rem; color:#d4c5b2;"></i>
             <p>Isi data di sebelah kiri, lalu klik <strong>Hitung Kebutuhan</strong>.</p>
           </div>
-
           <div id="hasilIsi" style="display:none;">
-            <div class="hasil-item">
-              <span class="hasil-label">Keliling Ruangan</span>
-              <span class="hasil-value" id="hasilKeliling">-</span>
-            </div>
-            <div class="hasil-item">
-              <span class="hasil-label">Luas Dinding</span>
-              <span class="hasil-value" id="hasilLuasDinding">-</span>
-            </div>
-            <div class="hasil-item">
-              <span class="hasil-label">Luas Pintu & Jendela</span>
-              <span class="hasil-value" id="hasilLuasBukaan">-</span>
-            </div>
-            <div class="hasil-item">
-              <span class="hasil-label">Luas Bersih Dinding</span>
-              <span class="hasil-value" id="hasilLuasBersih">-</span>
-            </div>
-            <div class="hasil-item">
-              <span class="hasil-label">Luas 1 Roll</span>
-              <span class="hasil-value" id="hasilLuasRoll">-</span>
-            </div>
-            <div class="hasil-item">
-              <span class="hasil-label">Cadangan Pola</span>
-              <span class="hasil-value" id="hasilWastage">-</span>
-            </div>
-
-            <div class="hasil-total">
-              <span>ROLL YANG DIBUTUHKAN</span>
-              <strong id="hasilRoll">-</strong>
-            </div>
-
+            <div class="hasil-item"><span class="hasil-label">Keliling Ruangan</span><span class="hasil-value" id="hasilKeliling">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Luas Dinding</span><span class="hasil-value" id="hasilLuasDinding">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Luas Pintu & Jendela</span><span class="hasil-value" id="hasilLuasBukaan">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Luas Bersih Dinding</span><span class="hasil-value" id="hasilLuasBersih">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Luas 1 Roll</span><span class="hasil-value" id="hasilLuasRoll">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Cadangan Pola</span><span class="hasil-value" id="hasilWastage">-</span></div>
+            <div class="hasil-total"><span>ROLL YANG DIBUTUHKAN</span><strong id="hasilRoll">-</strong></div>
             <div class="hasil-note">
               <i class="fas fa-info-circle"></i>
               <span>Disarankan beli <strong>1 roll ekstra</strong> untuk cadangan perbaikan di masa depan.</span>
             </div>
-
-            <!-- CTA WhatsApp dengan hasil otomatis -->
             <a href="#" id="waHasil" target="_blank" rel="noopener" class="btn-wa-hasil">
               <i class="fab fa-whatsapp"></i> Konsultasi Hasil Ini
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KALKULATOR MEUBELER ===== -->
+  <section id="meubeler">
+    <div class="container">
+      <div class="section-title">
+        <span class="badge-gratis" style="background:#a67c5b;">ESTIMASI</span>
+        <h2>Kalkulator <span style="color:#a67c5b;">Meubeler</span></h2>
+        <p>Estimasi biaya furniture custom (kitchen set, wardrobe, meja, dll) sesuai kebutuhan Anda.</p>
+      </div>
+
+      <div class="kalkulator-wrapper alt">
+        <div class="kalkulator-input">
+          <h3>🪑 Jenis Furniture</h3>
+          <div class="input-row">
+            <div class="input-group" style="flex:1 1 100%;">
+              <label for="jenisFurniture">Pilih Jenis</label>
+              <select id="jenisFurniture" onchange="ubahSatuan()">
+                <option value="kitchen|m1|2000000">Kitchen Set (per meter lari)</option>
+                <option value="wardrobe|m2|1800000">Wardrobe / Lemari Pakaian (per m²)</option>
+                <option value="meja|unit|2500000">Meja Kerja (per unit)</option>
+                <option value="raktv|m1|1800000">Rak TV (per meter lari)</option>
+                <option value="kabinet|m1|1600000">Kabinet Bawah (per meter lari)</option>
+                <option value="buku|m2|1700000">Lemari Buku (per m²)</option>
+                <option value="nakas|unit|800000">Nakas / Meja Samping (per unit)</option>
+                <option value="rias|unit|2200000">Meja Rias (per unit)</option>
+              </select>
+            </div>
+          </div>
+
+          <h3>📏 Ukuran</h3>
+          <div class="input-row" id="rowUkuran">
+            <div class="input-group">
+              <label for="panjangF">Panjang (m)</label>
+              <input type="number" id="panjangF" placeholder="3" min="0" step="0.01" />
+            </div>
+            <div class="input-group" id="groupTinggi">
+              <label for="tinggiF">Tinggi (m)</label>
+              <input type="number" id="tinggiF" placeholder="2.5" min="0" step="0.01" />
+            </div>
+            <div class="input-group" id="groupJumlah" style="display:none;">
+              <label for="jumlahF">Jumlah Unit</label>
+              <input type="number" id="jumlahF" placeholder="1" min="1" step="1" value="1" />
+            </div>
+          </div>
+
+          <h3>🪵 Material</h3>
+          <div class="input-row">
+            <div class="input-group" style="flex:1 1 100%;">
+              <label for="materialF">Pilih Material</label>
+              <select id="materialF">
+                <option value="1.0">HPL Standar (ekonomis)</option>
+                <option value="1.3" selected>Plywood + HPL (standar)</option>
+                <option value="1.5">Multiplek + HPL (premium)</option>
+                <option value="2.0">Solid Wood / Jati (mewah)</option>
+              </select>
+            </div>
+          </div>
+
+          <h3>🎨 Finishing</h3>
+          <div class="input-row">
+            <div class="input-group" style="flex:1 1 100%;">
+              <label for="finishingF">Pilih Finishing</label>
+              <select id="finishingF">
+                <option value="1.0" selected>HPL (standar)</option>
+                <option value="1.2">Melamik (semi-gloss)</option>
+                <option value="1.4">Cat Duco (glossy)</option>
+                <option value="1.6">Veneer (natural wood)</option>
+              </select>
+            </div>
+          </div>
+
+          <h3>✨ Aksesoris Tambahan (opsional)</h3>
+          <div class="input-row" style="flex-direction:column; gap:10px;">
+            <label style="display:flex; align-items:center; gap:10px; cursor:pointer; font-size:0.9rem;">
+              <input type="checkbox" class="aksesoris" value="10" style="width:auto;" /> Handle Premium (+10%)
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; cursor:pointer; font-size:0.9rem;">
+              <input type="checkbox" class="aksesoris" value="8" style="width:auto;" /> Soft Close Hinge (+8%)
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; cursor:pointer; font-size:0.9rem;">
+              <input type="checkbox" class="aksesoris" value="25" style="width:auto;" /> Sliding Door / Pintu Geser (+25%)
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; cursor:pointer; font-size:0.9rem;">
+              <input type="checkbox" class="aksesoris" value="12" style="width:auto;" /> LED Strip Lighting (+12%)
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; cursor:pointer; font-size:0.9rem;">
+              <input type="checkbox" class="aksesoris" value="15" style="width:auto;" /> Cermin / Kaca (+15%)
+            </label>
+          </div>
+
+          <div class="button-row">
+            <button type="button" class="btn-primary" onclick="hitungMeubeler()">
+              <i class="fas fa-calculator"></i> Hitung Estimasi
+            </button>
+            <button type="button" class="btn-reset" onclick="resetMeubeler()">
+              <i class="fas fa-undo"></i> Reset
+            </button>
+          </div>
+        </div>
+
+        <div class="kalkulator-hasil alt">
+          <h3>💰 Estimasi Biaya</h3>
+          <div id="hasilMeubelerKosong" class="hasil-placeholder">
+            <i class="fas fa-couch" style="font-size:3rem; color:#d4c5b2;"></i>
+            <p>Pilih jenis furniture & isi ukuran, lalu klik <strong>Hitung Estimasi</strong>.</p>
+          </div>
+          <div id="hasilMeubelerIsi" style="display:none;">
+            <div class="hasil-item"><span class="hasil-label">Jenis Furniture</span><span class="hasil-value" id="hasilJenis">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Ukuran</span><span class="hasil-value" id="hasilUkuran">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Luas / Jumlah</span><span class="hasil-value" id="hasilLuasF">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Material</span><span class="hasil-value" id="hasilMaterial">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Finishing</span><span class="hasil-value" id="hasilFinishing">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Harga Dasar</span><span class="hasil-value" id="hasilHargaDasar">-</span></div>
+            <div class="hasil-item"><span class="hasil-label">Aksesoris</span><span class="hasil-value" id="hasilAksesoris">-</span></div>
+            <div class="hasil-total" style="background: linear-gradient(135deg, #25D366 0%, #1ebe5b 100%);">
+              <span>ESTIMASI TOTAL</span>
+              <strong id="hasilTotalF" style="font-size:1.4rem;">-</strong>
+            </div>
+            <div class="hasil-item" style="margin-top:12px; border:none; padding:6px 0;">
+              <span class="hasil-label" style="font-size:0.85rem;">Range Harga</span>
+              <span class="hasil-value" id="hasilRange" style="font-size:0.9rem;">-</span>
+            </div>
+            <div class="hasil-note">
+              <i class="fas fa-info-circle"></i>
+              <span>Estimasi ini bersifat <strong>kasar</strong>. Harga final ditentukan setelah <strong>survei lokasi</strong> & diskusi detail.</span>
+            </div>
+            <a href="#" id="waMeubeler" target="_blank" rel="noopener" class="btn-wa-hasil">
+              <i class="fab fa-whatsapp"></i> Konsultasi & Minta Penawaran
             </a>
           </div>
         </div>
@@ -637,6 +733,32 @@
     </div>
   </section>
 
+  <!-- ===== BUKU DIGITAL (FLIPBOOK) ===== -->
+  <section id="buku">
+    <div class="container">
+      <div class="section-title">
+        <span class="badge-gratis" style="background:#a67c5b;">PORTOFOLIO DIGITAL</span>
+        <h2>Buku <span style="color:#a67c5b;">Proyek</span></h2>
+        <p>Klik salah satu buku untuk membaca dokumentasi lengkap proyek kami.</p>
+      </div>
+
+      <div class="filter-buku" id="filterBuku">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="rumah">Rumah</button>
+        <button class="filter-btn" data-filter="kantor">Kantor</button>
+        <button class="filter-btn" data-filter="kafe">Kafe</button>
+        <button class="filter-btn" data-filter="ruko">Ruko</button>
+      </div>
+
+      <div class="grid-buku" id="gridBuku"></div>
+
+      <div id="bukuKosong" style="display:none; text-align:center; padding:40px; color:#8b7d70;">
+        <i class="fas fa-book" style="font-size:3rem; color:#d4c5b2;"></i>
+        <p style="margin-top:12px;">Belum ada buku untuk kategori ini.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== TENTANG ===== -->
   <section id="tentang">
     <div class="container">
@@ -666,19 +788,16 @@
             <i class="fas fa-envelope"></i>
             <a href="mailto:interiorisakuiki@gmail.com">interiorisakuiki@gmail.com</a>
           </div>
-
           <div class="kontak-item">
             <i class="fas fa-phone-alt"></i>
             <a href="tel:+6285247043255">+62 852 4704 3255</a>
           </div>
-
           <div class="kontak-item">
             <i class="fab fa-whatsapp" style="color:#25D366;"></i>
             <a href="https://wa.me/6285247043255?text=Halo%20Isakuiki%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20desain%20interior." target="_blank" rel="noopener">
               +62 852 4704 3255 (WhatsApp)
             </a>
           </div>
-
           <div class="kontak-item">
             <i class="fas fa-map-marker-alt"></i>
             <span>Tenggarong, Kutai Kartanegara</span>
@@ -711,9 +830,7 @@
           <div style="text-align:center; margin-top:20px;">
             <p style="color:#6b5f55; font-size:0.9rem; margin-bottom:10px;">atau konsultasi langsung via</p>
             <a href="https://wa.me/6285247043255?text=Halo%20Isakuiki%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20desain%20interior." 
-               target="_blank" 
-               rel="noopener"
-               class="btn-whatsapp">
+               target="_blank" rel="noopener" class="btn-whatsapp">
               <i class="fab fa-whatsapp"></i> Chat via WhatsApp
             </a>
           </div>
@@ -741,16 +858,27 @@
 
   <!-- ===== FLOATING WHATSAPP ===== -->
   <a href="https://wa.me/6285247043255?text=Halo%20Isakuiki%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20desain%20interior." 
-     target="_blank" 
-     rel="noopener"
-     class="wa-float"
-     aria-label="Chat WhatsApp">
+     target="_blank" rel="noopener" class="wa-float" aria-label="Chat WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <!-- ===== MODAL VIEWER BUKU ===== -->
+  <div id="modalBuku" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); z-index:9999; align-items:center; justify-content:center; padding:20px;">
+    <div style="position:relative; width:100%; max-width:1100px; height:88vh; background:#fff; border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+      <div style="background:#2e2e2e; color:#fff; padding:14px 22px; display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <strong id="modalJudul" style="font-size:1rem;">Buku Proyek</strong>
+          <div id="modalKategori" style="font-size:0.75rem; color:#a67c5b; letter-spacing:1px; text-transform:uppercase;"></div>
+        </div>
+        <button id="tutupModal" style="background:none; border:none; color:#fff; font-size:1.8rem; cursor:pointer; line-height:1; padding:0 8px;">&times;</button>
+      </div>
+      <iframe id="frameBuku" src="" style="flex:1; border:none; width:100%;" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <!-- ===== SCRIPTS ===== -->
   <script>
-    // Hamburger toggle
+    // ===== HAMBURGER TOGGLE =====
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
@@ -793,7 +921,6 @@
       document.getElementById('hasilKosong').style.display = 'none';
       document.getElementById('hasilIsi').style.display = 'block';
 
-      // Update link WhatsApp dengan hasil perhitungan
       const pesanWA = `Halo Isakuiki Interior, saya sudah hitung kebutuhan wallpaper ruangan saya:%0A%0A` +
         `📏 Ruangan: ${panjang}m × ${lebar}m × ${tinggi}m%0A` +
         `🚪 Pintu: ${pintu} m², Jendela: ${jendela} m²%0A` +
@@ -801,7 +928,7 @@
         `🎨 Cadangan pola: ${wastagePct}%%0A%0A` +
         `📊 Hasil: *${rollDibutuhkan} roll* dibutuhkan.%0A%0A` +
         `Bisa minta rekomendasi & estimasi harga?`;
-      
+
       document.getElementById('waHasil').href = 
         `https://wa.me/6285247043255?text=${pesanWA}`;
     }
@@ -813,10 +940,288 @@
       document.getElementById('lebarRoll').value = '0.53';
       document.getElementById('panjangRoll').value = '10';
       document.getElementById('wastage').value = '10';
-
       document.getElementById('hasilKosong').style.display = 'block';
       document.getElementById('hasilIsi').style.display = 'none';
     }
+
+    // ===== KALKULATOR MEUBELER =====
+    function ubahSatuan() {
+      const val = document.getElementById('jenisFurniture').value;
+      const satuan = val.split('|')[1];
+      const groupTinggi = document.getElementById('groupTinggi');
+      const groupJumlah = document.getElementById('groupJumlah');
+      const panjangLabel = document.querySelector('label[for="panjangF"]');
+
+      if (satuan === 'unit') {
+        groupTinggi.style.display = 'none';
+        groupJumlah.style.display = 'flex';
+        panjangLabel.textContent = 'Panjang (m) - opsional';
+      } else if (satuan === 'm2') {
+        groupTinggi.style.display = 'flex';
+        groupJumlah.style.display = 'none';
+        panjangLabel.textContent = 'Panjang (m)';
+      } else {
+        groupTinggi.style.display = 'none';
+        groupJumlah.style.display = 'none';
+        panjangLabel.textContent = 'Panjang (m)';
+      }
+    }
+
+    function formatRupiah(angka) {
+      return 'Rp ' + Math.round(angka).toLocaleString('id-ID');
+    }
+
+    function hitungMeubeler() {
+      const jenisData = document.getElementById('jenisFurniture').value.split('|');
+      const satuan = jenisData[1];
+      const hargaSatuan = parseFloat(jenisData[2]);
+
+      const panjang = parseFloat(document.getElementById('panjangF').value) || 0;
+      const tinggi = parseFloat(document.getElementById('tinggiF').value) || 0;
+      const jumlah = parseFloat(document.getElementById('jumlahF').value) || 1;
+      const material = parseFloat(document.getElementById('materialF').value);
+      const finishing = parseFloat(document.getElementById('finishingF').value);
+      const materialText = document.getElementById('materialF').selectedOptions[0].text;
+      const finishingText = document.getElementById('finishingF').selectedOptions[0].text;
+      const jenisText = document.getElementById('jenisFurniture').selectedOptions[0].text;
+
+      if (satuan === 'unit') {
+        if (jumlah <= 0) { alert('Mohon isi jumlah unit.'); return; }
+      } else if (satuan === 'm2') {
+        if (panjang <= 0 || tinggi <= 0) { alert('Mohon isi panjang dan tinggi.'); return; }
+      } else {
+        if (panjang <= 0) { alert('Mohon isi panjang.'); return; }
+      }
+
+      let luas = 0;
+      let luasText = '';
+      if (satuan === 'unit') {
+        luas = jumlah;
+        luasText = jumlah + ' unit';
+      } else if (satuan === 'm2') {
+        luas = panjang * tinggi * jumlah;
+        luasText = (panjang * tinggi).toFixed(2) + ' m²' + (jumlah > 1 ? ' × ' + jumlah : '');
+      } else {
+        luas = panjang * jumlah;
+        luasText = panjang.toFixed(2) + ' m¹' + (jumlah > 1 ? ' × ' + jumlah : '');
+      }
+
+      const hargaDasar = luas * hargaSatuan;
+      const hargaMaterial = hargaDasar * material;
+      const hargaFinishing = hargaMaterial * finishing;
+
+      let totalPersen = 0;
+      const aksList = [];
+      document.querySelectorAll('.aksesoris:checked').forEach(cb => {
+        totalPersen += parseFloat(cb.value);
+        aksList.push(cb.parentElement.textContent.trim());
+      });
+
+      const hargaAkhir = hargaFinishing * (1 + totalPersen / 100);
+      const rangeMin = hargaAkhir * 0.85;
+      const rangeMax = hargaAkhir * 1.15;
+
+      document.getElementById('hasilJenis').textContent = jenisText.split(' (')[0];
+      document.getElementById('hasilUkuran').textContent = 
+        satuan === 'unit' ? '-' :
+        satuan === 'm2' ? `${panjang}m × ${tinggi}m` :
+        `${panjang}m`;
+      document.getElementById('hasilLuasF').textContent = luasText;
+      document.getElementById('hasilMaterial').textContent = materialText.split(' (')[0];
+      document.getElementById('hasilFinishing').textContent = finishingText.split(' (')[0];
+      document.getElementById('hasilHargaDasar').textContent = formatRupiah(hargaDasar);
+      document.getElementById('hasilAksesoris').textContent = 
+        totalPersen > 0 ? '+' + totalPersen + '%' : 'Tidak ada';
+      document.getElementById('hasilTotalF').textContent = formatRupiah(hargaAkhir);
+      document.getElementById('hasilRange').textContent = 
+        formatRupiah(rangeMin) + ' – ' + formatRupiah(rangeMax);
+
+      document.getElementById('hasilMeubelerKosong').style.display = 'none';
+      document.getElementById('hasilMeubelerIsi').style.display = 'block';
+
+      const pesanWA = 
+        `Halo Isakuiki Interior, saya ingin konsultasi pembuatan furniture custom:%0A%0A` +
+        `🪑 *${jenisText.split(' (')[0]}*%0A` +
+        `📏 Ukuran: ${luasText}%0A` +
+        `🪵 Material: ${materialText.split(' (')[0]}%0A` +
+        `🎨 Finishing: ${finishingText.split(' (')[0]}%0A` +
+        `✨ Aksesoris: ${aksList.length > 0 ? aksList.join(', ') : 'Tidak ada'}%0A%0A` +
+        `💰 Estimasi: *${formatRupiah(hargaAkhir)}*%0A` +
+        `📊 Range: ${formatRupiah(rangeMin)} – ${formatRupiah(rangeMax)}%0A%0A` +
+        `Bisa minta survei lokasi & penawaran resmi?`;
+
+      document.getElementById('waMeubeler').href = 
+        `https://wa.me/6285247043255?text=${pesanWA}`;
+    }
+
+    function resetMeubeler() {
+      document.getElementById('panjangF').value = '';
+      document.getElementById('tinggiF').value = '';
+      document.getElementById('jumlahF').value = '1';
+      document.getElementById('jenisFurniture').selectedIndex = 0;
+      document.getElementById('materialF').selectedIndex = 1;
+      document.getElementById('finishingF').selectedIndex = 0;
+      document.querySelectorAll('.aksesoris').forEach(cb => cb.checked = false);
+      document.getElementById('hasilMeubelerKosong').style.display = 'block';
+      document.getElementById('hasilMeubelerIsi').style.display = 'none';
+      ubahSatuan();
+    }
+
+    // =========================================================
+    //  📚 DATA BUKU PROYEK
+    //  Tambahkan buku baru di array ini setiap proyek selesai
+    // =========================================================
+    const daftarBuku = [
+      {
+        judul: "Villa Modern Samarinda",
+        kategori: "rumah",
+        kategoriLabel: "Rumah Tinggal",
+        tahun: "2025",
+        lokasi: "Samarinda, Kaltim",
+        cover: "",
+        url: "https://fliphtml5.com/GANTI-LINK-BUKU-1"
+      },
+      {
+        judul: "Kafe Kopi Tenggarong",
+        kategori: "kafe",
+        kategoriLabel: "Kafe & Resto",
+        tahun: "2025",
+        lokasi: "Tenggarong, Kukar",
+        cover: "",
+        url: "https://fliphtml5.com/GANTI-LINK-BUKU-2"
+      },
+      {
+        judul: "Kantor Startup Balikpapan",
+        kategori: "kantor",
+        kategoriLabel: "Kantor",
+        tahun: "2025",
+        lokasi: "Balikpapan, Kaltim",
+        cover: "",
+        url: "https://fliphtml5.com/GANTI-LINK-BUKU-3"
+      },
+      {
+        judul: "Ruko 3 Lantai Kukar",
+        kategori: "ruko",
+        kategoriLabel: "Ruko",
+        tahun: "2024",
+        lokasi: "Kutai Kartanegara",
+        cover: "",
+        url: "https://fliphtml5.com/GANTI-LINK-BUKU-4"
+      },
+      {
+        judul: "Rumah Minimalis Loa Kulu",
+        kategori: "rumah",
+        kategoriLabel: "Rumah Tinggal",
+        tahun: "2024",
+        lokasi: "Loa Kulu, Kukar",
+        cover: "",
+        url: "https://fliphtml5.com/GANTI-LINK-BUKU-5"
+      }
+    ];
+
+    // =========================================================
+    //  🔧 RENDER BUKU (JANGAN DIUBAH)
+    // =========================================================
+    let filterAktif = 'all';
+
+    function renderBuku() {
+      const grid = document.getElementById('gridBuku');
+      const kosong = document.getElementById('bukuKosong');
+      if (!grid) return;
+
+      const dataFiltered = filterAktif === 'all' 
+        ? daftarBuku 
+        : daftarBuku.filter(b => b.kategori === filterAktif);
+
+      const dataSorted = [...dataFiltered].sort((a, b) => b.tahun.localeCompare(a.tahun));
+
+      if (dataSorted.length === 0) {
+        grid.innerHTML = '';
+        kosong.style.display = 'block';
+        return;
+      }
+
+      kosong.style.display = 'none';
+      grid.innerHTML = dataSorted.map((buku, i) => {
+        const coverStyle = buku.cover 
+          ? `background-image: url('${buku.cover}'); color: transparent;`
+          : '';
+        
+        return `
+          <div class="card-buku" onclick="bukaBuku(${i})">
+            <div class="cover" style="${coverStyle}">
+              <span class="badge-buku">${buku.kategoriLabel}</span>
+              <span class="badge-tahun">${buku.tahun}</span>
+              ${!buku.cover ? '<i class="fas fa-book-open"></i>' : ''}
+            </div>
+            <div class="info-buku">
+              <h3>${buku.judul}</h3>
+              <div class="lokasi">
+                <i class="fas fa-map-marker-alt"></i>
+                ${buku.lokasi}
+              </div>
+              <span class="btn-baca">
+                Baca Buku <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function bukaBuku(index) {
+      const dataFiltered = filterAktif === 'all' 
+        ? daftarBuku 
+        : daftarBuku.filter(b => b.kategori === filterAktif);
+      const dataSorted = [...dataFiltered].sort((a, b) => b.tahun.localeCompare(a.tahun));
+      const buku = dataSorted[index];
+      if (!buku) return;
+
+      document.getElementById('modalJudul').textContent = buku.judul;
+      document.getElementById('modalKategori').textContent = 
+        `${buku.kategoriLabel} · ${buku.lokasi} · ${buku.tahun}`;
+      document.getElementById('frameBuku').src = buku.url;
+      document.getElementById('modalBuku').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function tutupBuku() {
+      document.getElementById('modalBuku').style.display = 'none';
+      document.getElementById('frameBuku').src = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    // ===== EVENT LISTENER GLOBAL =====
+    document.addEventListener('DOMContentLoaded', () => {
+      // Filter buku
+      document.querySelectorAll('#filterBuku .filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#filterBuku .filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterAktif = btn.dataset.filter;
+          renderBuku();
+        });
+      });
+
+      // Render awal buku
+      renderBuku();
+
+      // Inisialisasi kalkulator meubeler
+      ubahSatuan();
+
+      // Modal buku events
+      const modal = document.getElementById('modalBuku');
+      const btnTutup = document.getElementById('tutupModal');
+      if (btnTutup) btnTutup.addEventListener('click', tutupBuku);
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) tutupBuku();
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.style.display === 'flex') tutupBuku();
+      });
+    });
   </script>
 </body>
 </html>
