@@ -254,6 +254,46 @@
     }
     .card-buku:hover .btn-baca { color: #8b6a4e; gap: 12px; }
 
+    /* STATISTIK */
+    #statistik { padding: 50px 0; background: linear-gradient(135deg, #2e2e2e 0%, #1e1e1e 100%); }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 24px 16px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      border: 1px solid rgba(166,124,91,0.2);
+      transition: 0.25s;
+    }
+    .stat-item:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(166,124,91,0.5);
+    }
+    .stat-item i {
+      font-size: 2rem;
+      color: #a67c5b;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: block;
+      line-height: 1.2;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: #cbc3bb;
+      display: block;
+      margin-top: 4px;
+    }
+
     /* TENTANG */
     #tentang { padding: 70px 0 80px; background: #ffffff; }
     .tentang-wrapper { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
@@ -372,6 +412,9 @@
       .card-buku .info-buku h3 { font-size: 0.9rem; }
       .card-buku .info-buku .lokasi { font-size: 0.75rem; }
       .filter-btn { padding: 6px 14px; font-size: 0.78rem; }
+      .stats-grid { grid-template-columns: 1fr; gap: 16px; }
+      .stat-item { padding: 18px 12px; }
+      .stat-value { font-size: 1.6rem; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
@@ -388,7 +431,7 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <nav>
     <div class="container">
       <div class="logo">
@@ -411,7 +454,7 @@
     </div>
   </nav>
 
-  <!-- ===== BERANDA ===== -->
+  <!-- BERANDA -->
   <section id="beranda">
     <div class="container">
       <div class="hero-text">
@@ -427,7 +470,7 @@
     </div>
   </section>
 
-  <!-- ===== KALKULATOR WALLPAPER ===== -->
+  <!-- KALKULATOR WALLPAPER -->
   <section id="kalkulator">
     <div class="container">
       <div class="section-title">
@@ -535,7 +578,7 @@
     </div>
   </section>
 
-  <!-- ===== KALKULATOR MEUBELER ===== -->
+  <!-- KALKULATOR MEUBELER -->
   <section id="meubeler">
     <div class="container">
       <div class="section-title">
@@ -669,7 +712,7 @@
     </div>
   </section>
 
-  <!-- ===== PROYEK ===== -->
+  <!-- PROYEK -->
   <section id="proyek">
     <div class="container">
       <div class="section-title">
@@ -705,7 +748,7 @@
     </div>
   </section>
 
-  <!-- ===== BUKU DIGITAL (FLIPBOOK) ===== -->
+  <!-- BUKU DIGITAL -->
   <section id="buku">
     <div class="container">
       <div class="section-title">
@@ -714,7 +757,6 @@
         <p>Klik salah satu buku untuk membaca dokumentasi lengkap proyek kami.</p>
       </div>
 
-      <!-- FILTER: Tambah kategori Signage -->
       <div class="filter-buku" id="filterBuku">
         <button class="filter-btn active" data-filter="all">Semua</button>
         <button class="filter-btn" data-filter="rumah">Rumah</button>
@@ -733,7 +775,30 @@
     </div>
   </section>
 
-  <!-- ===== TENTANG ===== -->
+  <!-- STATISTIK -->
+  <section id="statistik">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <i class="fas fa-eye"></i>
+          <span class="stat-value" id="statVisits">—</span>
+          <span class="stat-label">Website Dikunjungi</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-calculator"></i>
+          <span class="stat-value" id="statWallpaper">—</span>
+          <span class="stat-label">Kalkulator Wallpaper Dipakai</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-couch"></i>
+          <span class="stat-value" id="statMeubeler">—</span>
+          <span class="stat-label">Kalkulator Meubeler Dipakai</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
   <section id="tentang">
     <div class="container">
       <div class="tentang-wrapper">
@@ -750,7 +815,7 @@
     </div>
   </section>
 
-  <!-- ===== KONTAK ===== -->
+  <!-- KONTAK -->
   <section id="kontak">
     <div class="container">
       <div class="kontak-grid">
@@ -823,20 +888,20 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       &copy; 2026 <span>Isakuiki Interior</span> — Desain & Konsultasi Interior, Tenggarong, Kutai Kartanegara. All rights reserved.
     </div>
   </footer>
 
-  <!-- ===== FLOATING WHATSAPP ===== -->
+  <!-- FLOATING WHATSAPP -->
   <a href="https://wa.me/6285247043255?text=Halo%20Isakuiki%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20desain%20interior." 
      target="_blank" rel="noopener" class="wa-float" aria-label="Chat WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ===== MODAL VIEWER BUKU ===== -->
+  <!-- MODAL VIEWER BUKU -->
   <div id="modalBuku" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); z-index:9999; align-items:center; justify-content:center; padding:20px;">
     <div style="position:relative; width:100%; max-width:1100px; height:88vh; background:#fff; border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
       <div style="background:#2e2e2e; color:#fff; padding:14px 22px; display:flex; justify-content:space-between; align-items:center;">
@@ -852,7 +917,70 @@
 
   <!-- ===== SCRIPTS ===== -->
   <script>
-    // Hamburger
+    // =========================================================
+    //  🔢 COUNTER API (CounterAPI.dev) — gratis, tanpa signup
+    //  Namespace: isakuiki-interior
+    //  Keys: website-visits, wallpaper-used, meubeler-used
+    // =========================================================
+    const COUNTER_NS = 'isakuiki-interior';
+
+    async function counterUp(key) {
+      try {
+        const res = await fetch(`https://api.counterapi.dev/v1/${COUNTER_NS}/${key}/up`);
+        if (!res.ok) return null;
+        const data = await res.json();
+        return data.count;
+      } catch (e) {
+        console.warn('Counter up error:', e);
+        return null;
+      }
+    }
+
+    async function counterGet(key) {
+      try {
+        const res = await fetch(`https://api.counterapi.dev/v1/${COUNTER_NS}/${key}/`);
+        if (!res.ok) return null;
+        const data = await res.json();
+        return data.count;
+      } catch (e) {
+        console.warn('Counter get error:', e);
+        return null;
+      }
+    }
+
+    function tampilkanAngka(id, nilai) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (nilai === null || nilai === undefined) {
+        el.textContent = '—';
+      } else {
+        el.textContent = Number(nilai).toLocaleString('id-ID');
+      }
+    }
+
+    // Muat semua statistik saat halaman dibuka
+    async function muatStatistik() {
+      // Website visits: increment hanya 1x per session
+      let visits;
+      if (!sessionStorage.getItem('isakuiki_visit_counted')) {
+        visits = await counterUp('website-visits');
+        if (visits !== null) sessionStorage.setItem('isakuiki_visit_counted', '1');
+      } else {
+        visits = await counterGet('website-visits');
+      }
+      tampilkanAngka('statVisits', visits);
+
+      // Kalkulator counts: hanya get (tidak increment)
+      const wallCount = await counterGet('wallpaper-used');
+      tampilkanAngka('statWallpaper', wallCount);
+
+      const meubCount = await counterGet('meubeler-used');
+      tampilkanAngka('statMeubeler', meubCount);
+    }
+
+    // =========================================================
+    //  🍔 HAMBURGER
+    // =========================================================
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
@@ -860,7 +988,9 @@
       link.addEventListener('click', () => navLinks.classList.remove('active'));
     });
 
-    // Kalkulator Wallpaper
+    // =========================================================
+    //  🧮 KALKULATOR WALLPAPER
+    // =========================================================
     function hitungWallpaper() {
       const panjang  = parseFloat(document.getElementById('panjang').value) || 0;
       const lebar    = parseFloat(document.getElementById('lebar').value) || 0;
@@ -904,6 +1034,11 @@
         `Bisa minta rekomendasi & estimasi harga?`;
 
       document.getElementById('waHasil').href = `https://wa.me/6285247043255?text=${pesanWA}`;
+
+      // ⬆ Increment counter wallpaper
+      counterUp('wallpaper-used').then(c => {
+        if (c !== null) tampilkanAngka('statWallpaper', c);
+      });
     }
 
     function resetKalkulator() {
@@ -917,7 +1052,9 @@
       document.getElementById('hasilIsi').style.display = 'none';
     }
 
-    // Kalkulator Meubeler
+    // =========================================================
+    //  🪑 KALKULATOR MEUBELER
+    // =========================================================
     function ubahSatuan() {
       const val = document.getElementById('jenisFurniture').value;
       const satuan = val.split('|')[1];
@@ -1024,6 +1161,11 @@
         `Bisa minta survei lokasi & penawaran resmi?`;
 
       document.getElementById('waMeubeler').href = `https://wa.me/6285247043255?text=${pesanWA}`;
+
+      // ⬆ Increment counter meubeler
+      counterUp('meubeler-used').then(c => {
+        if (c !== null) tampilkanAngka('statMeubeler', c);
+      });
     }
 
     function resetMeubeler() {
@@ -1041,8 +1183,6 @@
 
     // =========================================================
     //  📚 DATA BUKU PROYEK
-    //  Kategori tersedia: rumah, kantor, kafe, ruko, signage
-    //  Tambahkan buku baru di array ini setiap proyek selesai
     // =========================================================
     const daftarBuku = [
       {
@@ -1090,7 +1230,6 @@
         cover: "",
         url: "https://fliphtml5.com/GANTI-LINK-BUKU-5"
       },
-      // ===== CONTOH PROYEK SIGNAGE =====
       {
         judul: "Signage Gedung Perkantoran",
         kategori: "signage",
@@ -1120,9 +1259,6 @@
       }
     ];
 
-    // =========================================================
-    //  🔧 RENDER BUKU (JANGAN DIUBAH)
-    // =========================================================
     let filterAktif = 'all';
 
     function renderBuku() {
@@ -1192,7 +1328,9 @@
       document.body.style.overflow = 'auto';
     }
 
-    // Events
+    // =========================================================
+    //  🚀 INIT
+    // =========================================================
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('#filterBuku .filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1205,6 +1343,7 @@
 
       renderBuku();
       ubahSatuan();
+      muatStatistik();  // ← Muat statistik
 
       const modal = document.getElementById('modalBuku');
       const btnTutup = document.getElementById('tutupModal');
